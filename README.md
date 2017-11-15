@@ -4,3 +4,5 @@
 fork from https://github.com/julioppgca/ppgca_embedded_TM4C
 
 Modified TCP Echo for websocket client inspired by Mbed websocket
+
+is not stable yet
