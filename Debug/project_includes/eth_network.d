@@ -179,6 +179,12 @@ project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/Memory_HeapProxy.h
@@ -466,6 +472,12 @@ C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/C
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/Memory_HeapProxy.h: 

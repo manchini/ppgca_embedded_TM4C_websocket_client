@@ -8,37 +8,31 @@ SHELL = cmd.exe
 C_SRCS += \
 ../project_includes/EK_TM4C1294XL.c \
 ../project_includes/adc_sample.c \
-../project_includes/eth_network.c \
-../project_includes/websocket.c 
+../project_includes/eth_network.c 
 
 C_DEPS += \
 ./project_includes/EK_TM4C1294XL.d \
 ./project_includes/adc_sample.d \
-./project_includes/eth_network.d \
-./project_includes/websocket.d 
+./project_includes/eth_network.d 
 
 OBJS += \
 ./project_includes/EK_TM4C1294XL.obj \
 ./project_includes/adc_sample.obj \
-./project_includes/eth_network.obj \
-./project_includes/websocket.obj 
+./project_includes/eth_network.obj 
 
 OBJS__QUOTED += \
 "project_includes\EK_TM4C1294XL.obj" \
 "project_includes\adc_sample.obj" \
-"project_includes\eth_network.obj" \
-"project_includes\websocket.obj" 
+"project_includes\eth_network.obj" 
 
 C_DEPS__QUOTED += \
 "project_includes\EK_TM4C1294XL.d" \
 "project_includes\adc_sample.d" \
-"project_includes\eth_network.d" \
-"project_includes\websocket.d" 
+"project_includes\eth_network.d" 
 
 C_SRCS__QUOTED += \
 "../project_includes/EK_TM4C1294XL.c" \
 "../project_includes/adc_sample.c" \
-"../project_includes/eth_network.c" \
-"../project_includes/websocket.c" 
+"../project_includes/eth_network.c" 
 
 

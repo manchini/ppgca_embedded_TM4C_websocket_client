@@ -10,65 +10,14 @@ char ip_domain[200];
 char path[200];
 int port;
 
-/*
- *  ======== tcpWorker ========
- *  Task to handle TCP connection. Can be multiple Tasks running
- *  this function.
+
+/**
+ * Divide campos da URL em
+ * dominio
+ * porta
+ * path
  */
-Void tcpWorker(UArg arg0, UArg arg1)
-{
-    SOCKET clientfd = (SOCKET) arg0;
-    int nbytes;
-    bool flag = true;
-    char *buffer;
-    Error_Block eb;
-
-    fdOpenSession(TaskSelf());
-
-    //System_printf("tcpWorker: start clientfd = 0x%x\n", clientfd);
-
-    /* Make sure Error_Block is initialized */
-    Error_init(&eb);
-
-    /* Get a buffer to receive incoming packets. Use the default heap. */
-    buffer = Memory_alloc(NULL, TCPPACKETSIZE, 0, &eb);
-    if (buffer == NULL)
-    {
-        //System_printf("tcpWorker: failed to alloc memory\n");
-        Task_exit();
-    }
-
-    /* Loop while we receive data */
-    while (flag)
-    {
-        nbytes = recv(clientfd, (char *) buffer, TCPPACKETSIZE, 0);
-        if (nbytes > 0)
-        {
-            /* Echo the data back */
-            char *buffer2 = "I like turtles.";
-            nbytes = 15;
-            send(clientfd, (char *) buffer2, nbytes, 0);
-        }
-        else
-        {
-            fdClose(clientfd);
-            flag = false;
-        }
-    }
-    //System_printf("tcpWorker stop clientfd = 0x%x\n", clientfd);
-
-    /* Free the buffer back to the heap */
-    Memory_free(NULL, buffer, TCPPACKETSIZE);
-
-    fdCloseSession(TaskSelf());
-    /*
-     *  Since deleteTerminatedTasks is set in the cfg file,
-     *  the Task will be deleted when the idle task runs.
-     */
-    Task_exit();
-}
-
-Void fillFields(char *url)
+void fillFields(char *url)
 {
     char *res = NULL;
     char *res1 = NULL;
@@ -121,12 +70,15 @@ Void fillFields(char *url)
     //System_printf("path = [%s] \n", path);
 }
 
+//seta OpCode na Mensagem
 int sendOpcode(uint8_t opcode, char * msg)
 {
     msg[0] = 0x80 | (opcode & 0x0f);
     return 1;
 }
 
+
+//
 int sendMask(char * msg)
 {
     int i;
@@ -137,6 +89,7 @@ int sendMask(char * msg)
     return 4;
 }
 
+//
 int sendLength(uint32_t len, char * msg)
 {
     int i;
@@ -163,6 +116,9 @@ int sendLength(uint32_t len, char * msg)
     }
 }
 
+/**
+ * Método que envia a mensagem no websocket
+ */
 int WebsocketSend(char * str)
 {
     int res;
@@ -172,8 +128,10 @@ int WebsocketSend(char * str)
     idx += sendLength(strlen(str),msg + idx);
     idx += sendMask(msg + idx);
     memcpy(msg+idx, str, strlen(str));
-    System_printf(" %s ",*msg);
+
+    //System_printf(" %s ",*msg);
     //System_flush();
+
     res = send(lSocket,  msg, idx + strlen(str), 0);
 
     return res;
@@ -184,7 +142,7 @@ int WebSocketReadAux(char * str, int len, int min_len) {
     int res = 0, idx = 0;
     int j = 0;
     for (j = 0; j < MAX_TRY_WRITE; j++) {
-        res = recv(lSocket,str + idx, len - idx,0);
+        res = recv(lSocket,str, len - idx,0);
         if (res == -1)
             continue;
 
@@ -201,6 +159,9 @@ int WebSocketReadChar(char * pC) {
     return WebSocketReadAux(pC, 1, 1);
 }
 
+/**
+ * Metodo que recebe a mensagem de retorno do websocket
+ */
 int WebSocketRead(char * message) {
     int i = 0;
     uint32_t len_msg;
@@ -259,26 +220,24 @@ int WebSocketRead(char * message) {
 }
 
 
-Void Websocket(char *url)
+void Websocket(char *url)
 {
     fillFields(url);
 }
 
-Void WebsocketConnect()
+void WebsocketConnect()
 {
 
-    //SOCKET lSocket;
     struct sockaddr_in sLocalAddr;
     struct  timeval timeout;
 
-    //fdOpenSession(TaskSelf());
 
     lSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (lSocket < 0)
     {
-        //System_printf("tcpHandler: socket failed\n");
+        System_printf("tcpHandler: socket failed\n");
         Task_exit();
-        return;
+       // return ;
     }
 
     memset((char *) &sLocalAddr, 0, sizeof(sLocalAddr));
@@ -298,9 +257,8 @@ Void WebsocketConnect()
     }
     //System_printf("Conectou\n");
 
-    //System_flush();
-
     char cmd[200];
+    int ret;
 
     //System_printf("Host: %s\r\n", ip_domain);
 
@@ -321,27 +279,26 @@ Void WebsocketConnect()
     send(lSocket, (char *) cmd, strlen(cmd), 0);
     Task_sleep(100);
 
+    //Deveria gerar a chave aleatoria
     sprintf(cmd, "Sec-WebSocket-Key: L159VM0TWUzyDxwJEIEzjw==\r\n");
     send(lSocket, (char *) cmd, strlen(cmd), 0);
     Task_sleep(100);
 
     sprintf(cmd, "Sec-WebSocket-Version: 13\r\n\r\n");
-    send(lSocket, (char *) cmd, strlen(cmd), 0);
+    ret = send(lSocket, (char *) cmd, strlen(cmd), 0);
     Task_sleep(100);
 
-    /*if (ret != strlen(cmd)) {
-     close();
-     ERR("Could not send request");
-     return false;
-     }*/
 
-    int ret;
+    if (ret != strlen(cmd)) {
+        System_printf("Could not receive answer\r\n");
+     }
+
+
     ret = recv(lSocket, cmd, 200, 0);
     if (ret < 0)
     {
         //close();
         System_printf("Could not receive answer\r\n");
-        return;
     }
 
     cmd[199] = '\0';
@@ -356,34 +313,30 @@ Void WebsocketConnect()
             if (ret < 0)
             {
                 System_printf("Could not receive answer\r\n");
-                return;
             }
             cmd[ret] = '\0';
             printf("%s", cmd);
         }
         while (ret > 0);
 
-        return ;
+        return false;
     }
 
-    //System_printf("Conectado");
-    Task_sleep(100);
-    // System_flush();
 }
 
 /*
  *  ======== tcpHandler ========
- *  Creates new Task to handle new TCP connections.
+ *  Creates new Task to handle
  */
-Void tcpHandler(UArg arg0, UArg arg1)
+void tcpHandler(UArg arg0, UArg arg1)
 {
-    //System_printf("init tcpHandler \n");
+
     Websocket("ws:/192.168.2.1:8080/ws");
     WebsocketConnect();
     WebsocketSend("hue");
 
     char * msg;
-    WebSocketRead(msg);
+    WebSocketRead(*msg);
     System_printf(" voltou %s",msg);
     System_flush();
 

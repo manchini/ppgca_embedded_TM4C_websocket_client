@@ -14,13 +14,13 @@ ORDERED_OBJS += \
 "./project_includes/EK_TM4C1294XL.obj" \
 "./project_includes/adc_sample.obj" \
 "./project_includes/eth_network.obj" \
-"./project_includes/websocket.obj" \
 "../EK_TM4C1294XL.cmd" \
 $(GEN_CMDS__FLAG) \
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/grlib/ccs/Debug/grlib.lib" \
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/usblib/ccs/Debug/usblib.lib" \
 -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib" \
 -llibc.a \
+-l"C:/ti/CMSIS-SP-00300-r4p5-00rel0/CMSIS/Lib/CCS/M4/dsplib-cm4f.lib" \
 
 -include ../makefile.init
 
@@ -149,7 +149,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 TM4C_RTOS_Websocket_cli.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1294NCPDT --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"TM4C_RTOS_Websocket_cli.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TM4C_RTOS_Websocket_cli_linkInfo.xml" --rom_model -o "TM4C_RTOS_Websocket_cli.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -Ooff --opt_for_speed=0 --define=ccs="ccs" --define=ccs --define=PART_TM4C1294NCPDT --define=TIVAWARE --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"TM4C_RTOS_Websocket_cli.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TM4C_RTOS_Websocket_cli_linkInfo.xml" --rom_model -o "TM4C_RTOS_Websocket_cli.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -163,8 +163,8 @@ TM4C_RTOS_Websocket_cli.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_CMDS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "main.obj" "project_includes\EK_TM4C1294XL.obj" "project_includes\adc_sample.obj" "project_includes\eth_network.obj" "project_includes\websocket.obj" 
-	-$(RM) "main.d" "project_includes\EK_TM4C1294XL.d" "project_includes\adc_sample.d" "project_includes\eth_network.d" "project_includes\websocket.d" 
+	-$(RM) "main.obj" "project_includes\EK_TM4C1294XL.obj" "project_includes\adc_sample.obj" "project_includes\eth_network.obj" 
+	-$(RM) "main.d" "project_includes\EK_TM4C1294XL.d" "project_includes\adc_sample.d" "project_includes\eth_network.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

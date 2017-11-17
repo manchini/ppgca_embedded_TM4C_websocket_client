@@ -1,4 +1,3 @@
-
 /* Standard variables definitions */
 #include <stdint.h>
 #include <stdbool.h>
@@ -20,6 +19,15 @@
 #include "project_includes/adc_sample.h"
 #include "project_includes/eth_network.h"
 
+/* CMSIS DSP math library */
+#include <arm_math.h>
+
+/* C standard libs */
+#include <stdio.h>
+
+
+/* Debug breakpoint value */
+#define BREAK_POINT_VALUE   1   // Debug purpose only
 
 /*
  *  ======== main ========
@@ -31,7 +39,7 @@ int main(void)
     Board_initGPIO();
     Board_initEMAC();
 
-    System_printf("\nPeripheral initiated..." "\nStarting BIOS... \n");
+    System_printf("\nPeripheral initiated..." "\nStarting BIOS...\n");
     /* SysMin will only print to the console when you call flush or exit */
     System_flush();
 
@@ -41,9 +49,26 @@ int main(void)
     return (0);
 }
 
+/* initialize ADC/DMA data acquisition */
 void initSamplesTask(void)
 {
     DMA_init();
     ADC_init();
     TIMER_ADC_init(SAMPLE_FREQUENCY);
+}
+
+/* compute rms value  */
+void signalProcessing_Task(void)
+{
+
+}
+
+/* heart beat from RTOS*/
+void heartBeat_Task(void)
+{
+    while (1)
+    {
+        GPIO_toggle(Board_LED0);    // blink LED
+        Task_sleep(500);            // goto to sleep
+    }
 }
