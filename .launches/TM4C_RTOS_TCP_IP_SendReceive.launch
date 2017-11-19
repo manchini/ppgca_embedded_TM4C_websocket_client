@@ -6,7 +6,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="${build_artifact:TM4C_RTOS_TCP_IP_SendReceive}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="TM4C_RTOS_TCP_IP_SendReceive"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:TM4C_RTOS_TCP_IP_SendReceive}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="C:/Users\skelter_win\embedded2\ppgca_embedded_TM4C\TM4C_RTOS_TCP_IP_SendReceive\Debug\TM4C_RTOS_TCP_IP_SendReceive.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="D:/manchini\projetos\ppgca_embedded_TM4C_websocket_client\Debug\TM4C_RTOS_TCP_IP_SendReceive.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/TM4C_RTOS_TCP_IP_SendReceive"/>
 </listAttribute>

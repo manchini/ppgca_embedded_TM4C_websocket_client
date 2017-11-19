@@ -1,7 +1,7 @@
 # FIXED
 
 project_includes/eth_network.obj: ../project_includes/eth_network.c
-project_includes/eth_network.obj: D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/eth_network.h
+project_includes/eth_network.obj: D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/webSocket.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h
 project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdarg.h
 project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stddef.h
@@ -11,7 +11,7 @@ project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_
 project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdint.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
 project_includes/eth_network.obj: D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/Debug/configPkg/package/cfg/RTOS_config_pem4f.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types__prologue.h
@@ -19,8 +19,7 @@ project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/ru
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types__epilogue.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi__prologue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/package/package.defs.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/package.defs.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags__prologue.h
@@ -85,45 +84,24 @@ project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/ru
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert__epilogue.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__prologue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/package.defs.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__epilogue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/IHwi.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/package/package.defs.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi__epilogue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task__prologue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/package.defs.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Log.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IHeap.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/ITaskSupport.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/package/package.defs.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h
@@ -156,15 +134,6 @@ project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/ITaskSupport.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task__epilogue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Task_SupportProxy.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Log.h
-project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event.h
@@ -179,12 +148,6 @@ project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
-project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/Memory_HeapProxy.h
@@ -206,10 +169,23 @@ project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/ru
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h
 project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__prologue.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/package.defs.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__epilogue.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/netmain.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/stacksys.h
 project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdarg.h
@@ -292,9 +268,24 @@ project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/TivaWar
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom.h
 project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom_map.h
 project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/string.h
+project_includes/eth_network.obj: D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/eth_network.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h
+project_includes/eth_network.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/netmain.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_nettool.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_netctrl.h
+project_includes/eth_network.obj: C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_stack.h
+project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdlib.h
+project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdio.h
+project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/time.h
+project_includes/eth_network.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/string.h
 
 ../project_includes/eth_network.c: 
-D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/eth_network.h: 
+D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/webSocket.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdarg.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stddef.h: 
@@ -304,7 +295,7 @@ C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/targets/std.h
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdint.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
 D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/Debug/configPkg/package/cfg/RTOS_config_pem4f.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types__prologue.h: 
@@ -312,8 +303,7 @@ C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/package.defs.h:
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types__epilogue.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi__prologue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/package/package.defs.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/package.defs.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags__prologue.h: 
@@ -378,45 +368,24 @@ C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h:
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert__epilogue.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__prologue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/package.defs.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__epilogue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/IHwi.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/package/package.defs.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi__epilogue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task__prologue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/package.defs.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Log.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IHeap.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/ITaskSupport.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/package/package.defs.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h: 
@@ -449,15 +418,6 @@ C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/p
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/interfaces/ITaskSupport.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task__epilogue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Diags.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Log.h: 
-C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Assert.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Queue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event.h: 
@@ -472,12 +432,6 @@ C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/C
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
-C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Semaphore.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/Memory_HeapProxy.h: 
@@ -499,10 +453,23 @@ C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h:
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__prologue.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/package.defs.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS__epilogue.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Clock_TimerProxy.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/netmain.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/stacksys.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdarg.h: 
@@ -584,4 +551,19 @@ C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/tim
 C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/pin_map.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom.h: 
 C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom_map.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/string.h: 
+D:/manchini/projetos/ppgca_embedded_TM4C_websocket_client/project_includes/eth_network.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Error.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Memory.h: 
+C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Clock.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/netmain.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_nettool.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_netctrl.h: 
+C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages/ti/ndk/inc/_stack.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdlib.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/stdio.h: 
+C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/time.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.3.LTS/include/string.h: 

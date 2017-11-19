@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>TM4C_RTOS_TCP_IP_SendReceive</name>
+	<name>TM4C_RTOS_WebSocket</name>
 	<comment></comment>
 	<projects>
 	</projects>

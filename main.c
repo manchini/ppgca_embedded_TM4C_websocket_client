@@ -16,11 +16,15 @@
 
 /* Project Header files */
 #include "project_includes/Board.h"
-#include "project_includes/adc_sample.h"
+//#include "project_includes/adc_sample.h"
+
+#include "project_includes/webSocket.h"
 #include "project_includes/eth_network.h"
+
 
 /* CMSIS DSP math library */
 #include <arm_math.h>
+
 
 /* C standard libs */
 #include <stdio.h>
@@ -52,9 +56,7 @@ int main(void)
 /* initialize ADC/DMA data acquisition */
 void initSamplesTask(void)
 {
-    DMA_init();
-    ADC_init();
-    TIMER_ADC_init(SAMPLE_FREQUENCY);
+
 }
 
 /* compute rms value  */
