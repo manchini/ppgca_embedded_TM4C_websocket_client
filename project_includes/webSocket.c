@@ -74,9 +74,10 @@ void fillFields(char *url)
  */
 void WebsocketHandshake ()
 {
-
+    // struct para dados de conexão
     struct sockaddr_in sLocalAddr;
 
+    // inicializa instancia do socket
     lSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (lSocket < 0)
     {
@@ -85,21 +86,23 @@ void WebsocketHandshake ()
        // return ;
     }
 
+    //Seta parametros da conexão IP e porta
     memset((char *) &sLocalAddr, 0, sizeof(sLocalAddr));
     sLocalAddr.sin_family = AF_INET;
     sLocalAddr.sin_addr.s_addr = inet_addr(ip_domain);
     sLocalAddr.sin_port = htons(port);
 
-
+    //tenta conectar, passa o socket e parametros de conexão
     while (connect(lSocket, (struct sockaddr *) &sLocalAddr, sizeof(sLocalAddr)) < 0)
     {
+        //se não deu certo , espera 1 segundo e tenta denovo
         Task_sleep(1000);
     }
 
     char cmd[200];
     int ret;
 
-    // sent http header to upgrade to the ws protocol
+    // parametros do handshake
     sprintf(cmd, "GET /%s HTTP/1.1\r\n", path);
     send(lSocket, (char *) cmd, strlen(cmd), 0);
     Task_sleep(100);
@@ -138,6 +141,8 @@ void WebsocketHandshake ()
     }
 
     cmd[199] = '\0';
+    // essa parte ficou igual do mbed
+    //deveria testar se o retorno é válido
 
     if (strstr(cmd, "DdLWT/1JcX+nQFHebYP+rqEx5xI=") == NULL)
     {
@@ -168,20 +173,21 @@ int WebsocketSend(char * str)
     int res;
     char  msg[strlen(str) + 15];
     int idx = 0;
+    // monta pacote no padrão do websocket
     idx = sendOpcode(0x01, msg);
     idx += sendLength(strlen(str),msg + idx);
     idx += sendMask(msg + idx);
+
     memcpy(msg+idx, str, strlen(str));
 
-    //System_printf(" %s ",*msg);
-    //System_flush();
-
+    // envia a mensagem formatada no socket
     res = send(lSocket,  msg, idx + strlen(str), 0);
 
     return res;
 }
 
 //seta OpCode na Mensagem
+// copia do mbed
 int sendOpcode(uint8_t opcode, char * msg)
 {
     msg[0] = 0x80 | (opcode & 0x0f);
@@ -189,7 +195,7 @@ int sendOpcode(uint8_t opcode, char * msg)
 }
 
 
-//
+// copia do mbed
 int sendMask(char * msg)
 {
     int i;
@@ -200,7 +206,7 @@ int sendMask(char * msg)
     return 4;
 }
 
-//
+// copia do mbed
 int sendLength(uint32_t len, char * msg)
 {
     int i;
@@ -239,9 +245,10 @@ int WebSocketRead(char * message) {
     char mask[4] = {0, 0, 0, 0};
     bool is_masked = false;
 
-    opcode = 21;
-    // read the opcode
+
+    // fica no loop até que seja lido o opcode 0x81
     while (true) {
+        //Le retorno no socket
         if ( recv(lSocket,&opcode,1,0) != 1) {
             return false;
         }
@@ -253,9 +260,12 @@ int WebSocketRead(char * message) {
         Task_sleep(100);
     }
 
+    //le proximo caracter
     WebSocketReadChar(&c,1,1);
+    //identifica o tamanho da mensagem
     len_msg = c & 0x7f;
     is_masked = c & 0x80;
+
     if (len_msg == 126) {
         WebSocketReadChar(&c,1,1);
         len_msg = c << 8;
@@ -278,7 +288,9 @@ int WebSocketRead(char * message) {
             WebSocketReadChar(&c,1,1);
         mask[i] = c;
     }
-    //Task_sleep(100);
+
+    //mensagem curta está passando aqui
+    // le a mensagem
     int nb = WebSocketReadChar(message, len_msg, len_msg);
     if (nb != len_msg)
         return false;
@@ -296,6 +308,8 @@ int WebSocketReadChar(char * str, int len, int min_len) {
     int res = 0, idx = 0;
     int j = 0;
     for (j = 0; j < MAX_TRY_WRITE; j++) {
+        //recebe restante da mensagem do websocket
+        // com o tamanho da mensagem por parametro
         res = recv(lSocket,str+idx, len - idx,0);
         if (res == -1)
             continue;
